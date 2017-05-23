@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYM-ED-gJI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="hA8-1r-hoD">
+            <objects>
+                <viewController id="sGE-Ks-a0e" customClass="MainViewController" customModule="MemeBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D80-Iv-2ga"/>
+                        <viewControllerLayoutGuide type="bottom" id="kum-u5-NNc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fhh-6J-2tu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvj-a6-VBR">
+                                <rect key="frame" x="16" y="64" width="343" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R6x-d9-IiM">
+                                    <size key="itemSize" width="200" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCellID" id="uX8-g0-3a4" customClass="MemeCell" customModule="MemeBox" customModuleProvider="target">
+                                        <rect key="frame" x="71.5" y="0.0" width="200" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PzG-FQ-pFW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="PzG-FQ-pFW" firstAttribute="leading" secondItem="uX8-g0-3a4" secondAttribute="leading" id="Fin-RN-F1B"/>
+                                            <constraint firstAttribute="bottom" secondItem="PzG-FQ-pFW" secondAttribute="bottom" id="OIG-sX-0xN"/>
+                                            <constraint firstAttribute="trailing" secondItem="PzG-FQ-pFW" secondAttribute="trailing" id="js8-WV-PeC"/>
+                                            <constraint firstItem="PzG-FQ-pFW" firstAttribute="top" secondItem="uX8-g0-3a4" secondAttribute="top" id="mSq-yH-lJV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="img" destination="PzG-FQ-pFW" id="8bB-i0-4Ya"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="sGE-Ks-a0e" id="nI8-Fv-SIo"/>
+                                    <outlet property="delegate" destination="sGE-Ks-a0e" id="cU0-fV-RCC"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mvj-a6-VBR" firstAttribute="leading" secondItem="fhh-6J-2tu" secondAttribute="leadingMargin" id="8bt-UY-EMx"/>
+                            <constraint firstItem="mvj-a6-VBR" firstAttribute="top" secondItem="D80-Iv-2ga" secondAttribute="bottom" id="Der-Td-iJA"/>
+                            <constraint firstItem="mvj-a6-VBR" firstAttribute="centerX" secondItem="fhh-6J-2tu" secondAttribute="centerX" id="IEd-4Q-bX5"/>
+                            <constraint firstItem="kum-u5-NNc" firstAttribute="top" secondItem="mvj-a6-VBR" secondAttribute="bottom" constant="8" symbolic="YES" id="pHY-Rt-6S7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pwp-Md-PHu"/>
+                    <connections>
+                        <outlet property="MemeCollection" destination="mvj-a6-VBR" id="vEj-je-ils"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvK-bv-Vrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5999999999999" y="79.610194902548727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6G9-ed-eKE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYM-ED-gJI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yzo-1b-AVM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sGE-Ks-a0e" kind="relationship" relationship="rootViewController" id="saK-xv-8q6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLN-21-de2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="79.610194902548727"/>
+        </scene>
+    </scenes>
+</document>
