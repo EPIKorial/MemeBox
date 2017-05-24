@@ -27,9 +27,10 @@ class Meme {
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var MemeCollection: UICollectionView!
+    
     var player: AVAudioPlayer?
     let reuseIdentifier = "MemeCellID"
-    var memes = [Meme]()
+    let memeDB = MemeDatabase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +38,18 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         MemeCollection.dataSource = self
         self.title = "MemeBox";
         
-        memes.append(Meme(path: "ah", Img: #imageLiteral(resourceName: "ah!")));
-        memes.append(Meme(path: "maisouicestclair", Img: #imageLiteral(resourceName: "maisouicestclair")));
-        memes.append(Meme(path: "souffrirok", Img: #imageLiteral(resourceName: "souffrir")));
+        let rect = UIView(frame: CGRect(x: -10, y: 0, width: 500, height: 35))
+        rect.backgroundColor = UIColor.gray
+        rect.alpha = 0.5
+        MemeCollection.addSubview(rect)
+        
+        let titleLabel = UILabel(frame: CGRect(x:10 , y: 5, width: 100 , height: 25))
+        titleLabel.textAlignment = .center
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.numberOfLines = 1
+        titleLabel.text = "MemeBeats"
+        titleLabel.textColor = UIColor.white
+        MemeCollection.addSubview(titleLabel);
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,7 +63,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return memes.count
+        return memeDB.memes.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -63,12 +73,12 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCell
         
         cell.backgroundColor = UIColor.black
-        cell.img.image = memes[indexPath.row].img;
+        cell.img.image = memeDB.memes[indexPath.row].img;
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        playSound(path: memes[indexPath.row].sound_path);
+        playSound(path: memeDB.memes[indexPath.row].sound_path);
     }
     
     func playSound(path: String) {

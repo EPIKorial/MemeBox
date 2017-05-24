@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,25 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvj-a6-VBR">
-                                <rect key="frame" x="16" y="64" width="343" height="595"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R6x-d9-IiM">
-                                    <size key="itemSize" width="200" height="100"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvj-a6-VBR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="R6x-d9-IiM">
+                                    <size key="itemSize" width="100" height="75"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="50" maxX="15" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCellID" id="uX8-g0-3a4" customClass="MemeCell" customModule="MemeBox" customModuleProvider="target">
-                                        <rect key="frame" x="71.5" y="0.0" width="200" height="100"/>
+                                        <rect key="frame" x="15" y="50" width="100" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PzG-FQ-pFW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -61,13 +61,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mvj-a6-VBR" firstAttribute="leading" secondItem="fhh-6J-2tu" secondAttribute="leadingMargin" id="8bt-UY-EMx"/>
-                            <constraint firstItem="mvj-a6-VBR" firstAttribute="top" secondItem="D80-Iv-2ga" secondAttribute="bottom" id="Der-Td-iJA"/>
-                            <constraint firstItem="mvj-a6-VBR" firstAttribute="centerX" secondItem="fhh-6J-2tu" secondAttribute="centerX" id="IEd-4Q-bX5"/>
-                            <constraint firstItem="kum-u5-NNc" firstAttribute="top" secondItem="mvj-a6-VBR" secondAttribute="bottom" constant="8" symbolic="YES" id="pHY-Rt-6S7"/>
-                        </constraints>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="pwp-Md-PHu"/>
                     <connections>
