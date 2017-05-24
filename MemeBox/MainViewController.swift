@@ -39,7 +39,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         memes.append(Meme(path: "ah", Img: #imageLiteral(resourceName: "ah!")));
         memes.append(Meme(path: "maisouicestclair", Img: #imageLiteral(resourceName: "maisouicestclair")));
-        
+        memes.append(Meme(path: "souffrirok", Img: #imageLiteral(resourceName: "souffrir")));
     }
     
     override func didReceiveMemoryWarning() {
