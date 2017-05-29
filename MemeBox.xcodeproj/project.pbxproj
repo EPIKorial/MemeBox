@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		171ACCFB1ED56C69002C5512 /* souffrirok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 171ACCFA1ED56C69002C5512 /* souffrirok.mp3 */; };
-		172A44571ED598FA008CD0C2 /* allusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 172A44561ED598FA008CD0C2 /* allusion.mp3 */; };
 		172A44591ED5A3BB008CD0C2 /* MemeDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A44581ED5A3BB008CD0C2 /* MemeDatabase.swift */; };
+		17C77D2E1ED61C6600707B8E /* partout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17C77D2B1ED61C6600707B8E /* partout.mp3 */; };
+		17C77D2F1ED61C6600707B8E /* allusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17C77D2C1ED61C6600707B8E /* allusion.mp3 */; };
+		17C77D301ED61C6600707B8E /* popopo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17C77D2D1ED61C6600707B8E /* popopo.mp3 */; };
+		17C77D321ED61FC400707B8E /* pasfaux.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17C77D311ED61FC400707B8E /* pasfaux.mp3 */; };
+		17C77D341ED6235900707B8E /* planetes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17C77D331ED6235900707B8E /* planetes.mp3 */; };
 		5C54ADD51ED4B32E00D537F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54ADD41ED4B32E00D537F6 /* AppDelegate.swift */; };
 		5C54ADD71ED4B32E00D537F6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54ADD61ED4B32E00D537F6 /* MainViewController.swift */; };
 		5C54ADDA1ED4B32E00D537F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C54ADD81ED4B32E00D537F6 /* Main.storyboard */; };
@@ -21,8 +25,12 @@
 
 /* Begin PBXFileReference section */
 		171ACCFA1ED56C69002C5512 /* souffrirok.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = souffrirok.mp3; path = ../MARCWIESER/app/src/main/res/raw/souffrirok.mp3; sourceTree = "<group>"; };
-		172A44561ED598FA008CD0C2 /* allusion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = allusion.mp3; path = ../allusion.mp3; sourceTree = "<group>"; };
 		172A44581ED5A3BB008CD0C2 /* MemeDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDatabase.swift; sourceTree = "<group>"; };
+		17C77D2B1ED61C6600707B8E /* partout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = partout.mp3; sourceTree = "<group>"; };
+		17C77D2C1ED61C6600707B8E /* allusion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = allusion.mp3; sourceTree = "<group>"; };
+		17C77D2D1ED61C6600707B8E /* popopo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = popopo.mp3; sourceTree = "<group>"; };
+		17C77D311ED61FC400707B8E /* pasfaux.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pasfaux.mp3; sourceTree = "<group>"; };
+		17C77D331ED6235900707B8E /* planetes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = planetes.mp3; sourceTree = "<group>"; };
 		5C54ADD11ED4B32E00D537F6 /* MemeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C54ADD41ED4B32E00D537F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C54ADD61ED4B32E00D537F6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +87,11 @@
 		5C54ADE61ED4B7E200D537F6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				172A44561ED598FA008CD0C2 /* allusion.mp3 */,
+				17C77D331ED6235900707B8E /* planetes.mp3 */,
+				17C77D311ED61FC400707B8E /* pasfaux.mp3 */,
+				17C77D2B1ED61C6600707B8E /* partout.mp3 */,
+				17C77D2C1ED61C6600707B8E /* allusion.mp3 */,
+				17C77D2D1ED61C6600707B8E /* popopo.mp3 */,
 				171ACCFA1ED56C69002C5512 /* souffrirok.mp3 */,
 				5C54ADEB1ED4D1C500D537F6 /* maisouicestclair.mp3 */,
 				5C54ADE71ED4B7F800D537F6 /* ah.mp3 */,
@@ -147,13 +159,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172A44571ED598FA008CD0C2 /* allusion.mp3 in Resources */,
 				5C54ADEC1ED4D1C500D537F6 /* maisouicestclair.mp3 in Resources */,
+				17C77D2E1ED61C6600707B8E /* partout.mp3 in Resources */,
+				17C77D2F1ED61C6600707B8E /* allusion.mp3 in Resources */,
 				5C54ADDF1ED4B32E00D537F6 /* LaunchScreen.storyboard in Resources */,
 				171ACCFB1ED56C69002C5512 /* souffrirok.mp3 in Resources */,
+				17C77D341ED6235900707B8E /* planetes.mp3 in Resources */,
 				5C54ADDC1ED4B32E00D537F6 /* Assets.xcassets in Resources */,
 				5C54ADE81ED4B7F800D537F6 /* ah.mp3 in Resources */,
+				17C77D321ED61FC400707B8E /* pasfaux.mp3 in Resources */,
 				5C54ADDA1ED4B32E00D537F6 /* Main.storyboard in Resources */,
+				17C77D301ED61C6600707B8E /* popopo.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
